@@ -9,10 +9,10 @@ joke_json = req.json()
 joke_setup = (joke_json['setup'])
 
 twitter_auth_keys = {
-    "consumer_key"        : "os.environ['consumer_key']",
-    "consumer_secret"     : "os.environ['consumer_secret']",
-    "access_token"        : "os.environ['access_token']",
-    "access_token_secret" : "os.environ['access_token_secret']"
+    "consumer_key"        : os.environ.get('consumer_key'),
+    "consumer_secret"     : os.environ.get('consumer_secret'),
+    "access_token"        : os.environ.get('access_token'),
+    "access_token_secret" : os.environ.get('access_token_secret')
 }
 
 auth = tweepy.OAuthHandler(
@@ -25,4 +25,4 @@ auth.set_access_token(
 )
 api = tweepy.API(auth)
 
-status = api.update_status(status=joke_setup) 
+status = api.update_status(status=joke_setup)
