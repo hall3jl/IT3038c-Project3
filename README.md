@@ -14,8 +14,8 @@ If you wish to setup your own instance of this bot, please see the following bas
 3. Create a new app in Heroku
 4. Deploy this repo to Heroku
 5. Fill in the following Config Vars with the API keys provided by Twitter
-- access_token
-- access_token_secret
-- consumer_key
-- consumer_secret
+	- access_token
+	- access_token_secret
+	- consumer_key
+	- consumer_secret
 6. Use the "Heroku Scheduler" add-on to run the script on an interval of your choosing. The run command will be "python tweet.py"
