@@ -4,7 +4,7 @@ import tweepy
 import os
 
 # Get joke info
-req = requests.get("https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist&type=twopart")
+req = requests.get("https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,religious,racist,sexist&type=twopart")
 joke_json = req.json()
 joke_setup = (joke_json['setup'])
 
